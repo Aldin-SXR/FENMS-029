@@ -35,7 +35,7 @@ contract ElectiveCoursesIBU {
    function registerCourses(address student, uint[] calldata courseIds) external {
        for (uint i = 0; i < courseIds.length; i++) {
            // Check max capacity for a course
-           require(courseIds[i] >= 0 && courseIds[i] <= 6, "You are choosing a non-existing course!");
+           require(courseIds[i] >= 0 && courseIds[i] <= 7, "You are choosing a non-existing course!");
            require(courseCapacity[courseIds[i]] < maxCap[courseIds[i]], string.concat("Course ", getCourse(courseIds[i]), " filled up!"));
            require(courseStudents[courseIds[i]][student] != true, string.concat("You already chose ", getCourse(courseIds[i]), "!"));
           
