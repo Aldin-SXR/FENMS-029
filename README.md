@@ -20,7 +20,12 @@
 ## Running the code
 This project demonstrates some basic Hardhat use cases. It is sectioned into weeks for contracts and scripts.
 
-Try running some of the following tasks:
+To start using the project:
+- install the dependencies by running `npm install`
+- rename the `.env.example` file to `.env` and supply your own environment values
+- have fun
+
+Try running some of the following vtasks:
 
 ```shell
 npx hardhat help
