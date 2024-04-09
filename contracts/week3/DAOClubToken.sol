@@ -6,7 +6,9 @@ import {ERC20Votes} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20Vo
 import {Nonces} from "@openzeppelin/contracts/utils/Nonces.sol";
 
 contract DAOClubToken is ERC20, ERC20Permit, ERC20Votes {
-    constructor() ERC20("DAOClubToken", "MERIK") ERC20Permit("DAOClubToken") {}
+    constructor(uint _initialSupply) ERC20("DAOClubToken", "MERIK") ERC20Permit("DAOClubToken") {
+        _mint(msg.sender, _initialSupply);
+    }
 
     // The functions below are overrides required by Solidity.
 
