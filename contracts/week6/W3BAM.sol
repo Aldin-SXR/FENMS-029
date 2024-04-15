@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract W3BAM is ERC20, Ownable(msg.sender) {
-    constructor() ERC20("W3BAM", "Web3 BAM") {
+    constructor() ERC20("Web3 BAM", "W3BAM") {
         _mint(msg.sender, 100000 * 10 ** 18);
     }
 
